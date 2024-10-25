@@ -1,0 +1,57 @@
+** Logger Function Test Cases
+
+1: Check File Creation
+Description: Verify that the log file is created if it does not exist.
+Input: "new_log.log", "Test message", "INFO"
+Expected Output: new_log.log file is created, containing the log entry. The Timestamp should be the date and time the message was logged.
+
+2: Logging a Standard Message
+Description: Write a log message with a standard "INFO" level.
+Input: "application.log", "User logged in", "INFO"
+Expected Output: Log entry in the format [timestamp] [INFO] User logged in in application.log. The message must be appended, and the file should contain the previous logged messages. he Timestamp should be the date and time the message was logged.
+
+3: Logging a Warning Message
+Description: Write a log message with a "WARNING" level.
+Input: "application.log", "Failed login attempt", "WARNING"
+Expected Output: Log entry in the format [timestamp] [WARNING] Failed login attempt in application.log. The message must be appended, and the file should contain the previous logged messages.
+
+4: Logging an Error Message
+Description: Write a log message with a "ERROR" level.
+Input: "application.log", "Database connection failed", "WARNING"
+Expected Output: Log entry in the format [timestamp] [ERROR] Failed login attempt in application.log. The message must be appended, and the file should contain the previous logged messages.
+
+5: Logging a Debug Message
+Description: Write a log message with a "DEBUG" level.
+Input: "application.log", "Inputting username", "WARNING"
+Expected Output: Log entry in the format [timestamp] [DEBUG] Failed login attempt in application.log. The message must be appended, and the file should contain the previous logged messages.
+
+6: Logging a Critical Message
+Description: Write a log message with a "CRITICAL" level.
+Input: "application.log", "Cat walking on the keyboard", "WARNING"
+Expected Output: Log entry in the format [timestamp] [CRITICAL] Failed login attempt in application.log. The message must be appended, and the file should contain the previous logged messages.
+
+7: Logging an Empty Message
+Description: Handle an empty message string.
+Input: "application.log", "", "INFO"
+Expected Output: Log entry in the format [timestamp] [INFO] (message is empty but still logs).
+
+8: Handling Null Message
+Description: Ensure the function can handle a null message input.
+Input: "application.log", null, "INFO"
+Expected Output: Log entry in the format [timestamp] [INFO] (message is empty but still logs).
+
+9: Invalid Log Level
+Description: Check behavior for an invalid log level.
+Input: "application.log", "Some message", "INVALID_LEVEL"
+Expected Output: Exception in thrown. 
+
+10: Entering an empty file path.
+Description: Check if the file path defaults to "application.log" when left empty.
+Input: "", "Empty file path", "INFO"
+Expected Output: Log entry in the format [timestamp] [INFO] Empty file path. The message must be appended in the "application.log" file, and the file should contain the previous logged messages.
+
+11: Entering a null file path.
+Description: Check if the file path defaults to "application.log" when null.
+Input: null, "Null file path", "INFO"
+Expected Output: Log entry in the format [timestamp] [INFO] Null file path. The message must be appended in the "application.log" file, and the file should contain the previous logged messages.
+
