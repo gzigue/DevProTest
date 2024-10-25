@@ -1,0 +1,51 @@
+# Ignore build directories and files
+bin/
+obj/
+Debug/
+Release/
+
+# Rider IDE files
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code settings
+.vscode/
+
+# MacOS specific files
+.DS_Store
+
+# Log files
+*.log
+
+# .NET-specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nuget/
+*.nupkg
+*.snupkg
+*.dbmdl
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+*.runsettings
+
+# Coverage tool output
+coverage/
+*.coverage
+*.coveragexml
+coverage.opencover.xml
+
+# Generated files by build tools
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.AssemblyInfoInputs.cache
+
+# Resharper files
+_ReSharper*
